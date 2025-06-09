@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:talkie_app/feature_box.dart';
 import 'package:talkie_app/palette.dart';
 
 class HomePage extends StatefulWidget {
@@ -83,8 +82,32 @@ class _HomePageState extends State<HomePage> {
                   fontWeight: FontWeight.bold,
              )),
            ),
-           //
-        ],
+           //features list
+           Column(
+            children: [
+              FeatureBox(
+                color: Pallete.firstSuggestionBoxColor, 
+                headerText: 'Chatgpt', 
+                descriptionText: 'A smarter way to stay organized and informed with ChatGPT',
+              ),
+              FeatureBox(
+                color: Pallete.secondSuggestionBoxColor, 
+                headerText: 'Dall-E', 
+                descriptionText: 'Get inspired and stay creative with your personal assistant powered by Dall-E',
+              ),
+              FeatureBox(
+                color: Pallete.thirdSuggestionBoxColor, 
+                headerText: 'Smart Voice Assistant', 
+                descriptionText: 'Get the best of both worlds with a voice assistant powered by Dall-E and ChatGPT',
+              ),
+            ],
+           )
+        ]
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Pallete.firstSuggestionBoxColor,
+        onPressed: () {},
+        child: Icon(Icons.mic),
       ),
     );
   }
