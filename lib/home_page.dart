@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:talkie_app/palette.dart';
 
@@ -69,6 +71,19 @@ class _HomePageState extends State<HomePage> {
               ),),
             ),
            ),
+           Container(
+            padding: EdgeInsets.only(left:10),
+            alignment: Alignment.centerLeft,
+            margin: EdgeInsets.only(top: 10,left: 22),
+             child: const Text('Here are a few features',
+              style: TextStyle(
+                  color: Pallete.mainFontColor,
+                  fontFamily: 'Cera Pro',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+             )),
+           ),
+           //
         ],
       ),
     );
